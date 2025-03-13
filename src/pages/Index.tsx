@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -304,19 +303,19 @@ const testimonials = [
   {
     name: 'Priya Sharma',
     title: 'Owner, Elegance Boutique',
-    quote: 'Pehnaav has transformed our boutique's collection. The quality of their garments is exceptional, and our customers love the unique designs.',
+    quote: "Pehnaav has transformed our boutique's collection. The quality of their garments is exceptional, and our customers love the unique designs.",
     avatar: 'https://randomuser.me/api/portraits/women/32.jpg'
   },
   {
     name: 'Rajiv Mehta',
     title: 'Director, Fashion Forward',
-    quote: 'We've been working with Pehnaav for over 3 years. Their wholesale collection consistently exceeds our expectations in quality and style.',
+    quote: "We've been working with Pehnaav for over 3 years. Their wholesale collection consistently exceeds our expectations in quality and style.",
     avatar: 'https://randomuser.me/api/portraits/men/54.jpg'
   },
   {
     name: 'Ananya Patel',
     title: 'Manager, Trendsetter Retail',
-    quote: 'The attention to detail in Pehnaav's garments is remarkable. Our store has seen increased customer satisfaction since partnering with them.',
+    quote: "The attention to detail in Pehnaav's garments is remarkable. Our store has seen increased customer satisfaction since partnering with them.",
     avatar: 'https://randomuser.me/api/portraits/women/45.jpg'
   }
 ];
