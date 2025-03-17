@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/pehnaav__?igsh=eXdlZ3BqdzE4MjF4" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-wine-800 flex items-center justify-center hover:bg-gold-700 transition-colors"
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 <Instagram size={20} />
               </a>
               <a 
-                href="mailto:info@pehnaav.com" 
+                href="mailto:support@pehnaav.co.in" 
                 className="w-10 h-10 rounded-full bg-wine-800 flex items-center justify-center hover:bg-gold-700 transition-colors"
               >
                 <Mail size={20} />
@@ -59,15 +59,16 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin size={20} className="mr-3 text-gold-400 mt-1 flex-shrink-0" />
-                <p>123 Fashion Street, Textile District, Mumbai, India - 400001</p>
+                <p>Plot No. 166A, Uttam Nagar West, New Delhi</p>
               </div>
               <div className="flex items-center">
                 <Phone size={20} className="mr-3 text-gold-400 flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-gold-400 transition-colors">+91 98765 43210</a>
+                <a href="tel:+919370088290" className="hover:text-gold-400 transition-colors">+91 93700 88290</a>,&nbsp; 
+                <a href="tel:+919238592077" className="hover:text-gold-400 transition-colors">+91 92385 92077</a>
               </div>
               <div className="flex items-center">
                 <Mail size={20} className="mr-3 text-gold-400 flex-shrink-0" />
-                <a href="mailto:info@pehnaav.com" className="hover:text-gold-400 transition-colors">info@pehnaav.com</a>
+                <a href="mailto:support@pehnaav.co.in" className="hover:text-gold-400 transition-colors">support@pehnaav.co.in</a>
               </div>
             </div>
           </div>

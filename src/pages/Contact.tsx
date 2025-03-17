@@ -95,9 +95,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-medium text-gray-900 mb-1">Our Location</h3>
                     <p className="text-gray-600">
-                      123 Fashion Street, Textile Hub<br />
-                      Mumbai, Maharashtra 400001<br />
-                      India
+                      Plot No. 166A, Uttam Nagar West, New Delhi
                     </p>
                   </div>
                 </div>
@@ -109,8 +107,10 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-medium text-gray-900 mb-1">Phone Number</h3>
                     <p className="text-gray-600">
-                      +91 98765 43210 (Business Inquiries)<br />
-                      +91 98765 12345 (Customer Support)
+                      +91 9370088290, +91 8459653179 (Maharashtra Inquiries)<br />
+                      +91 9238592077 (Odisha Inquiries)
+                      <br />
+                      +91 8700389540 (Delhi Corporate Office)
                     </p>
                   </div>
                 </div>
@@ -122,8 +122,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-medium text-gray-900 mb-1">Email Address</h3>
                     <p className="text-gray-600">
-                      wholesale@pehnaav.com<br />
-                      support@pehnaav.com
+                      support@pehnaav.co.in<br />
+                      inquiry@pehnaav.co.in
                     </p>
                   </div>
                 </div>
@@ -135,8 +135,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-medium text-gray-900 mb-1">Social Media</h3>
                     <p className="text-gray-600">
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-wine-700 hover:text-wine-800 underline">
-                        @PehnaavOfficial
+                      <a href="https://instagram.com/pehnaav__?igsh=eXdlZ3BqdzE4MjF4" target="_blank" rel="noopener noreferrer" className="text-wine-700 hover:text-wine-800">
+                        @pehnaav__
                       </a>
                     </p>
                   </div>
@@ -147,16 +147,12 @@ const ContactPage: React.FC = () => {
                 <h3 className="font-medium text-gray-900 mb-4">Business Hours</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div>
-                    <p className="text-gray-700 font-medium">Monday - Friday:</p>
-                    <p className="text-gray-600">9:00 AM - 6:00 PM</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-700 font-medium">Saturday:</p>
-                    <p className="text-gray-600">10:00 AM - 4:00 PM</p>
+                    <p className="text-gray-700 font-medium">Monday - Saturday:</p>
+                    <p className="text-gray-600">10:00 AM - 8:00 PM</p>
                   </div>
                   <div>
                     <p className="text-gray-700 font-medium">Sunday:</p>
-                    <p className="text-gray-600">Closed</p>
+                    <p className="text-gray-600">10:00 AM - 6:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -275,17 +271,17 @@ const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-gray-900 mb-4">
-              Visit Our Showroom
+              Visit Us
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Schedule a visit to our showroom to explore our latest collections in person
+              Schedule a visit to explore our latest collections in person
             </p>
           </div>
 
           <div className="bg-white p-2 rounded-lg shadow-md overflow-hidden">
             <div className="aspect-w-16 aspect-h-9">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9932728333687!2d72.82259881541872!3d19.018243887121886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce65c3cfffff%3A0xd4eb77f235b39dab!2sMumbai%20Textile%20Market!5e0!3m2!1sen!2sin!4v1654332461432!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.45959161823!2d77.04894567550245!3d28.615984684831844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d050fcf48cc6b%3A0x7cf3407cd78a232d!2sMahaveer%20Apartments!5e0!3m2!1sen!2sin!4v1742220634906!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -315,7 +311,7 @@ const ContactPage: React.FC = () => {
               Our team is ready to assist you with personalized wholesale solutions tailored to your business.
             </p>
             <a
-              href="tel:+919876543210"
+              href="tel:+919717277631"
               className="inline-flex items-center justify-center px-8 py-3 bg-gold-500 hover:bg-gold-600 text-wine-950 font-medium rounded-md transition-all transform hover:translate-y-[-2px] hover:shadow-lg mx-2"
             >
               <Phone size={18} className="mr-2" />

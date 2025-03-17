@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               scrolled={scrolled}
             />
             <a 
-              href="https://instagram.com" 
+              href="https://instagram.com/pehnaav__?igsh=eXdlZ3BqdzE4MjF4" 
               target="_blank" 
               rel="noopener noreferrer"
               className={`flex items-center gap-1 transition-colors hover:text-wine-700 ${
