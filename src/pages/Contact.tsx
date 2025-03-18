@@ -1,24 +1,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, ExternalLink, MessagesSquare, Clock, Truck } from 'lucide-react';
 import PageTransition from '@/components/PageTransition';
-import { useForm } from "react-hook-form";
-import { toast } from '@/hooks/use-toast';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ContactPage: React.FC = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
-  const onSubmit = (data: any) => {
-    // In a real application, you would handle the form submission here
-    console.log('Form submitted:', data);
-    toast({
-      title: "Message sent!",
-      description: "Thank you for contacting Pehnaav. We'll respond shortly.",
-    });
-    reset();
-  };
-
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -67,7 +60,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Information & Form Section */}
+      {/* Contact Information & FAQ Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -158,7 +151,7 @@ const ContactPage: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Contact Form */}
+            {/* FAQ Section - replacing the contact form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -166,101 +159,103 @@ const ContactPage: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">
-                Send Us A Message
+                Frequently Asked Questions
               </h2>
               <p className="text-gray-700 mb-8">
-                Please fill out the form below with your inquiry, and our team will 
-                get back to you as soon as possible.
+                Find quick answers to common wholesale inquiries below. For specific questions, 
+                please reach out to our team directly.
               </p>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Your Name *
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      className={`w-full px-4 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-wine-500`}
-                      {...register("name", { required: "Name is required" })}
-                    />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-600">{errors.name.message as string}</p>
-                    )}
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address *
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className={`w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-wine-500`}
-                      {...register("email", { 
-                        required: "Email is required",
-                        pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                          message: "Invalid email address"
-                        }
-                      })}
-                    />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-600">{errors.email.message as string}</p>
-                    )}
-                  </div>
-                </div>
+              <Accordion type="single" collapsible className="w-full mb-8">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-left font-medium">
+                    What is the minimum order quantity (MOQ)?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Our standard minimum order quantity is 50 pieces per style. However, for first-time buyers,
+                    we offer flexibility with a mixed order of 30 pieces across different styles to help you
+                    test our products with your customers.
+                  </AccordionContent>
+                </AccordionItem>
 
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Company Name
-                  </label>
-                  <input
-                    id="company"
-                    type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-wine-500"
-                    {...register("company")}
-                  />
-                </div>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-left font-medium">
+                    Do you offer customization options?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Yes, we offer various customization options including custom labeling, packaging, and
+                    slight design modifications. For full custom designs, we require a minimum order of 100
+                    pieces per style with a slightly longer lead time.
+                  </AccordionContent>
+                </AccordionItem>
 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject *
-                  </label>
-                  <input
-                    id="subject"
-                    type="text"
-                    className={`w-full px-4 py-2 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-wine-500`}
-                    {...register("subject", { required: "Subject is required" })}
-                  />
-                  {errors.subject && (
-                    <p className="mt-1 text-sm text-red-600">{errors.subject.message as string}</p>
-                  )}
-                </div>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-left font-medium">
+                    What are your payment terms?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    For new customers, we require a 50% advance payment to initiate production, with the
+                    remaining balance due before shipment. Established customers with a good payment history
+                    may qualify for more flexible payment terms.
+                  </AccordionContent>
+                </AccordionItem>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    className={`w-full px-4 py-2 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-wine-500`}
-                    {...register("message", { required: "Message is required" })}
-                  ></textarea>
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-600">{errors.message.message as string}</p>
-                  )}
-                </div>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-left font-medium">
+                    What is your production lead time?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Standard production lead time is 2-3 weeks for regular orders. For large volume or custom
+                    orders, lead time may extend to 4-6 weeks. We also maintain stock of popular styles that
+                    can be shipped within 3-5 business days.
+                  </AccordionContent>
+                </AccordionItem>
 
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-wine-800 hover:bg-wine-700 text-white rounded-md transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
-                >
-                  <Send size={18} className="mr-2" />
-                  Send Message
-                </button>
-              </form>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger className="text-left font-medium">
+                    Do you ship internationally?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Yes, we ship to international destinations. Shipping costs and delivery times vary based on
+                    location. We work with reliable logistics partners to ensure secure and timely delivery of
+                    your orders. For international orders, we handle all export documentation.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <div className="space-y-6">
+                <h3 className="text-xl font-display font-medium text-gray-900">Quick Contact Options</h3>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Card className="hover:bg-wine-50 transition-colors">
+                    <CardContent className="p-6 flex items-center space-x-4">
+                      <div className="h-12 w-12 rounded-full bg-wine-100 flex items-center justify-center">
+                        <MessagesSquare className="h-6 w-6 text-wine-700" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium">WhatsApp</h4>
+                        <a href="https://wa.me/919370088290" className="text-wine-700 hover:underline text-sm flex items-center">
+                          +91 9370088290 <ExternalLink className="ml-1 h-3 w-3" />
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="hover:bg-wine-50 transition-colors">
+                    <CardContent className="p-6 flex items-center space-x-4">
+                      <div className="h-12 w-12 rounded-full bg-wine-100 flex items-center justify-center">
+                        <Phone className="h-6 w-6 text-wine-700" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium">Call Now</h4>
+                        <a href="tel:+918700389540" className="text-wine-700 hover:underline text-sm flex items-center">
+                          +91 8700389540
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
