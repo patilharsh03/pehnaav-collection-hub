@@ -216,9 +216,9 @@ const ContactPage: React.FC = () => {
                     Do you ship internationally?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Yes, we ship to international destinations. Shipping costs and delivery times vary based on
-                    location. We work with reliable logistics partners to ensure secure and timely delivery of
-                    your orders. For international orders, we handle all export documentation.
+                    No, we currently only ship within India. We provide nationwide shipping services and 
+                    have dedicated representatives for Maharashtra, Odisha, and Delhi regions to ensure 
+                    efficient delivery and customer service throughout the country.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
