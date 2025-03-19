@@ -14,6 +14,7 @@ interface Product {
   description: string;
   image: string;
   minOrder: number;
+  price: string;
   tags: string[];
 }
 
@@ -270,12 +271,13 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ active, onClick, childr
 const products: Product[] = [
   {
     id: 'p1',
-    name: 'Embroidered Silk Saree',
-    category: 'ethnic',
-    description: 'Hand-embroidered silk saree with intricate designs',
-    image: 'https://images.unsplash.com/photo-1614607242094-b1b2cf769ff3?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
+    name: 'Men"s Shirt',
+    category: 'casual',
+    description: 'Comfortable shirts for everyday wear',
+    image: '/products/men_shirt_1.png',
     minOrder: 20,
-    tags: ['silk', 'embroidered', 'premium']
+    price: "₹200/per piece",
+    tags: ['casual', 'printed', 'shirts']
   },
   {
     id: 'p2',
@@ -284,6 +286,7 @@ const products: Product[] = [
     description: 'Three-piece lehenga set with contemporary designs',
     image: 'https://images.unsplash.com/photo-1603251578711-3290ca1a0187?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 15,
+    price: "₹200/per piece",
     tags: ['lehenga', 'festive', 'wedding']
   },
   {
@@ -293,6 +296,7 @@ const products: Product[] = [
     description: 'Tailored business suit for professional settings',
     image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 25,
+    price: "₹200/per piece",
     tags: ['suit', 'business', 'professional']
   },
   {
@@ -302,6 +306,7 @@ const products: Product[] = [
     description: 'Comfortable cotton shirts for everyday wear',
     image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     minOrder: 30,
+    price: "₹200/per piece",
     tags: ['cotton', 'casual', 'everyday']
   },
   {
@@ -311,6 +316,7 @@ const products: Product[] = [
     description: 'Premium kurta collection with traditional prints',
     image: 'https://images.unsplash.com/photo-1574791418596-6aafcbf8222e?ixlib=rb-4.0.3&auto=format&fit=crop&w=956&q=80',
     minOrder: 20,
+    price: "₹200/per piece",
     tags: ['kurta', 'traditional', 'festive']
   },
   {
@@ -320,6 +326,7 @@ const products: Product[] = [
     description: 'Elegantly designed blazers for women',
     image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1964&q=80',
     minOrder: 20,
+    price: "₹200/per piece",
     tags: ['blazer', 'women', 'professional']
   },
   {
@@ -329,6 +336,7 @@ const products: Product[] = [
     description: 'Lightweight fabrics perfect for summer months',
     image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1020&q=80',
     minOrder: 25,
+    price: "₹200/per piece",
     tags: ['summer', 'lightweight', 'casual']
   },
   {
@@ -338,6 +346,7 @@ const products: Product[] = [
     description: 'Warm and stylish garments for winter season',
     image: 'https://images.unsplash.com/photo-1577900232427-18219b9166a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 20,
+    price: "₹200/per piece",
     tags: ['winter', 'warm', 'seasonal']
   },
   {
@@ -347,6 +356,7 @@ const products: Product[] = [
     description: 'Premium quality denim wear for all occasions',
     image: 'https://images.unsplash.com/photo-1582418702059-97ebafb35d09?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 30,
+    price: "₹200/per piece",
     tags: ['denim', 'casual', 'everyday']
   }
 ];
