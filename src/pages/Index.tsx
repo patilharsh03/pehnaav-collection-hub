@@ -1,17 +1,28 @@
+
 import React, { useEffect } from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import ImageWithLoader from '@/components/ImageWithLoader';
 
 const HomePage: React.FC = () => {
+  // Add navigation hook
+  const navigate = useNavigate();
+
   // Smooth scrolling for hero section arrow
   const scrollToNextSection = () => {
     const featuredSection = document.getElementById('featured-section');
     if (featuredSection) {
       featuredSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Navigation to Contact page with scroll to top
+  const navigateToContact = () => {
+    navigate('/contact');
+    // Scroll to top
+    window.scrollTo(0, 0);
   };
 
   // Animation variants for staggered animations
@@ -256,12 +267,12 @@ const HomePage: React.FC = () => {
               Partner with Pehnaav for premium wholesale garments that set your brand apart from the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <button
+                onClick={navigateToContact}
                 className="inline-flex items-center justify-center px-8 py-3 bg-gold-500 hover:bg-gold-600 text-wine-950 font-medium rounded-md transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
               >
                 Get in Touch
-              </Link>
+              </button>
               <Link
                 to="/products"
                 className="inline-flex items-center justify-center px-8 py-3 bg-transparent hover:bg-white/10 text-white border border-white/30 rounded-md transition-all transform hover:translate-y-[-2px]"
