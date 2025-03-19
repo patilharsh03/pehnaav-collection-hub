@@ -24,6 +24,13 @@ const HomePage: React.FC = () => {
     // Scroll to top
     window.scrollTo(0, 0);
   };
+  
+  // Navigation to Products page with scroll to top
+  const navigateToProducts = () => {
+    navigate('/products');
+    // Scroll to top
+    window.scrollTo(0, 0);
+  };
 
   // Animation variants for staggered animations
   const containerVariants = {
@@ -273,12 +280,12 @@ const HomePage: React.FC = () => {
               >
                 Get in Touch
               </button>
-              <Link
-                to="/products"
+              <button
+                onClick={navigateToProducts}
                 className="inline-flex items-center justify-center px-8 py-3 bg-transparent hover:bg-white/10 text-white border border-white/30 rounded-md transition-all transform hover:translate-y-[-2px]"
               >
                 Browse Products
-              </Link>
+              </button>
             </div>
           </motion.div>
         </div>
