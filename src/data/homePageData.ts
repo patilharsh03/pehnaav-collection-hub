@@ -8,19 +8,19 @@ export const categories: Category[] = [
     id: 'ethnic',
     title: 'Ethnic Wear',
     description: 'Traditional garments with contemporary designs',
-    image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80'
+    image: '/products/designer_kurta_ladies.png'
   },
   {
-    id: 'formal',
-    title: 'Formal Wear',
-    description: 'Sophisticated attire for professional settings',
-    image: 'https://images.unsplash.com/photo-1506634572416-48cdfe530110?ixlib=rb-4.0.3&auto=format&fit=crop&w=985&q=80'
+    id: 'wedding',
+    title: 'Wedding Wear',
+    description: 'Sophisticated attire for wedding and party settings',
+    image: '/products/formal_suit_men.jpg'
   },
   {
     id: 'casual',
     title: 'Casual Collection',
     description: 'Comfortable yet stylish everyday garments',
-    image: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80'
+    image: '/products/men_shirt_1.png'
   }
 ];
 
