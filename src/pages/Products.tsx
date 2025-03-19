@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowRight, Filter, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,6 +15,7 @@ interface Product {
   minOrder: number;
   price: string;
   tags: string[];
+  sizes: string;
 }
 
 const ProductsPage: React.FC = () => {
@@ -191,9 +191,12 @@ const ProductsPage: React.FC = () => {
                       <span className="inline-block px-2 py-1 bg-wine-50 text-wine-800 rounded-full text-xs font-medium mb-3">
                         {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                       </span>
-                      <div className="mb-2">
-                        <h3 className="text-lg font-medium text-gray-900 inline">{product.name}</h3>
-                        <span className="text-wine-700 font-medium ml-2">{product.price}</span>
+                      <h3 className="text-lg font-medium text-gray-900 mb-1">{product.name}</h3>
+                      <div className="mb-1">
+                        <span className="text-wine-700 font-medium">{product.price}</span>
+                      </div>
+                      <div className="mb-3">
+                        <span className="text-gray-700 text-sm">Size: {product.sizes}</span>
                       </div>
                       <p className="text-gray-600 text-sm mb-4">{product.description}</p>
                       <div className="flex justify-between items-center">
@@ -274,13 +277,14 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ active, onClick, childr
 const products: Product[] = [
   {
     id: 'p1',
-    name: 'Men"s Shirt',
+    name: 'Men\'s Shirt',
     category: 'casual',
     description: 'Comfortable shirts for everyday wear',
     image: '/products/men_shirt_1.png',
     minOrder: 20,
     price: "₹200/per piece",
-    tags: ['casual', 'printed', 'shirts']
+    tags: ['casual', 'printed', 'shirts'],
+    sizes: '38 to 44'
   },
   {
     id: 'p2',
@@ -290,7 +294,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1603251578711-3290ca1a0187?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 15,
     price: "₹200/per piece",
-    tags: ['lehenga', 'festive', 'wedding']
+    tags: ['lehenga', 'festive', 'wedding'],
+    sizes: '38 to 44'
   },
   {
     id: 'p3',
@@ -300,7 +305,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 25,
     price: "₹200/per piece",
-    tags: ['suit', 'business', 'professional']
+    tags: ['suit', 'business', 'professional'],
+    sizes: '38 to 44'
   },
   {
     id: 'p4',
@@ -310,7 +316,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     minOrder: 30,
     price: "₹200/per piece",
-    tags: ['cotton', 'casual', 'everyday']
+    tags: ['cotton', 'casual', 'everyday'],
+    sizes: '38 to 44'
   },
   {
     id: 'p5',
@@ -320,7 +327,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1574791418596-6aafcbf8222e?ixlib=rb-4.0.3&auto=format&fit=crop&w=956&q=80',
     minOrder: 20,
     price: "₹200/per piece",
-    tags: ['kurta', 'traditional', 'festive']
+    tags: ['kurta', 'traditional', 'festive'],
+    sizes: '38 to 44'
   },
   {
     id: 'p6',
@@ -330,7 +338,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1964&q=80',
     minOrder: 20,
     price: "₹200/per piece",
-    tags: ['blazer', 'women', 'professional']
+    tags: ['blazer', 'women', 'professional'],
+    sizes: '38 to 44'
   },
   {
     id: 'p7',
@@ -340,7 +349,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1020&q=80',
     minOrder: 25,
     price: "₹200/per piece",
-    tags: ['summer', 'lightweight', 'casual']
+    tags: ['summer', 'lightweight', 'casual'],
+    sizes: '38 to 44'
   },
   {
     id: 'p8',
@@ -350,7 +360,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1577900232427-18219b9166a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 20,
     price: "₹200/per piece",
-    tags: ['winter', 'warm', 'seasonal']
+    tags: ['winter', 'warm', 'seasonal'],
+    sizes: '38 to 44'
   },
   {
     id: 'p9',
@@ -360,7 +371,8 @@ const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1582418702059-97ebafb35d09?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
     minOrder: 30,
     price: "₹200/per piece",
-    tags: ['denim', 'casual', 'everyday']
+    tags: ['denim', 'casual', 'everyday'],
+    sizes: '38 to 44'
   }
 ];
 
