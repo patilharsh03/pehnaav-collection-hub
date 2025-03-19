@@ -191,7 +191,10 @@ const ProductsPage: React.FC = () => {
                       <span className="inline-block px-2 py-1 bg-wine-50 text-wine-800 rounded-full text-xs font-medium mb-3">
                         {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                       </span>
-                      <h3 className="text-lg font-medium text-gray-900 mb-2">{product.name}</h3>
+                      <div className="mb-2">
+                        <h3 className="text-lg font-medium text-gray-900 inline">{product.name}</h3>
+                        <span className="text-wine-700 font-medium ml-2">{product.price}</span>
+                      </div>
                       <p className="text-gray-600 text-sm mb-4">{product.description}</p>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-500">Min Order: {product.minOrder} pcs</span>
