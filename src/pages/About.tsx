@@ -383,7 +383,7 @@ const team = [
   },
   {
     name: 'Shubham Patil',
-    role: 'Chief Operatins Officer (COO)',
+    role: 'Chief Operations Officer (COO)',
     bio: 'Shubham oversees our day-to-day operations with precision and efficiency, ensuring that every process runs smoothly and aligns with our company’s strategic goals for sustained growth and success.',
     image: '/team/shubham.jpg'
   },
