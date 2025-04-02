@@ -2,15 +2,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { scrollToTop } from '@/lib/scrollToTop';
 
 const Footer: React.FC = () => {
+  const handleNavLinkClick = () => {
+    scrollToTop();
+  };
+
   return (
     <footer className="bg-wine-950 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand Column */}
           <div className="col-span-1">
-            <Link to="/" className="inline-block mb-4">
+            <Link to="/" className="inline-block mb-4" onClick={handleNavLinkClick}>
               <h2 className="text-3xl font-display font-bold text-white">Pehnaav</h2>
             </Link>
             <p className="text-gold-100 mb-6 max-w-xs">
@@ -39,16 +44,16 @@ const Footer: React.FC = () => {
             <h3 className="font-display text-xl mb-6 text-gold-300">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="hover:text-gold-400 transition-colors">Home</Link>
+                <Link to="/" onClick={handleNavLinkClick} className="hover:text-gold-400 transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-gold-400 transition-colors">Products</Link>
+                <Link to="/products" onClick={handleNavLinkClick} className="hover:text-gold-400 transition-colors">Products</Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-gold-400 transition-colors">About Us</Link>
+                <Link to="/about" onClick={handleNavLinkClick} className="hover:text-gold-400 transition-colors">About Us</Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-gold-400 transition-colors">Contact</Link>
+                <Link to="/contact" onClick={handleNavLinkClick} className="hover:text-gold-400 transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
