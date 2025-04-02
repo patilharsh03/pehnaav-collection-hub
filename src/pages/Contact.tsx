@@ -306,7 +306,7 @@ const ContactPage: React.FC = () => {
               Our team is ready to assist you with personalized wholesale solutions tailored to your business.
             </p>
             <a
-              href="tel:+919717277631"
+              href="tel:+918700389540"
               className="inline-flex items-center justify-center px-8 py-3 bg-gold-500 hover:bg-gold-600 text-wine-950 font-medium rounded-md transition-all transform hover:translate-y-[-2px] hover:shadow-lg mx-2"
             >
               <Phone size={18} className="mr-2" />
