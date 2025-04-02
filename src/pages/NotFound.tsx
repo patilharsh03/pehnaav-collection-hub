@@ -1,5 +1,7 @@
-import { useLocation } from "react-router-dom";
+
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { scrollToTop } from "@/lib/scrollToTop";
 
 const NotFound = () => {
   const location = useLocation();
@@ -11,14 +13,27 @@ const NotFound = () => {
     );
   }, [location.pathname]);
 
+  const handleNavigateHome = () => {
+    scrollToTop();
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+      <div className="text-center max-w-md px-4">
+        <h1 className="text-6xl font-bold text-wine-900 mb-4">404</h1>
+        <p className="text-xl text-gray-600 mb-4">
+          The page you're looking for cannot be found
+        </p>
+        <p className="text-gray-500 mb-8">
+          The link you followed may be broken, or the page may have been removed
+        </p>
+        <Link 
+          to="/" 
+          onClick={handleNavigateHome}
+          className="inline-flex items-center justify-center px-6 py-3 bg-wine-800 hover:bg-wine-700 text-white rounded-md transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
+        >
           Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );
