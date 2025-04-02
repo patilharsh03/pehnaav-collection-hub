@@ -1,12 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Instagram, Menu, X, ShoppingBag, Info, Home, Phone } from 'lucide-react';
+import { scrollToTop } from '@/lib/scrollToTop';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -171,11 +172,18 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ to, label, active, mobile, icon, scrolled }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate(to);
+    scrollToTop();
+  };
+
   return (
-    <Link
-      to={to}
+    <div 
+      onClick={handleNavigation}
       className={`
-        relative flex items-center transition-all duration-300 ${mobile ? 'py-2 px-4 text-white' : ''}
+        relative flex items-center transition-all duration-300 cursor-pointer ${mobile ? 'py-2 px-4 text-white' : ''}
         ${active 
           ? mobile 
             ? 'text-gold-400 font-medium' 
@@ -195,7 +203,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, label, active, mobile, icon, scro
       {active && !mobile && (
         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-wine-700 to-gold-400 mt-1" />
       )}
-    </Link>
+    </div>
   );
 };
 

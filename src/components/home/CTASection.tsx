@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { scrollToTop } from '@/lib/scrollToTop';
 
 const CTASection: React.FC = () => {
   const navigate = useNavigate();
@@ -9,15 +9,13 @@ const CTASection: React.FC = () => {
   // Navigation to Contact page with scroll to top
   const navigateToContact = () => {
     navigate('/contact');
-    // Scroll to top
-    window.scrollTo(0, 0);
+    scrollToTop();
   };
   
   // Navigation to Products page with scroll to top
   const navigateToProducts = () => {
     navigate('/products');
-    // Scroll to top
-    window.scrollTo(0, 0);
+    scrollToTop();
   };
 
   return (

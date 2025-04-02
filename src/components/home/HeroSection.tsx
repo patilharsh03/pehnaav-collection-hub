@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ImageWithLoader from '@/components/ImageWithLoader';
+import { scrollToTop } from '@/lib/scrollToTop';
 
 interface HeroSectionProps {
   scrollToNextSection: () => void;
@@ -14,7 +14,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToNextSection }) => {
   
   const handleNavigate = (path: string) => {
     navigate(path);
-    window.scrollTo(0, 0);
+    scrollToTop();
   };
 
   return (
@@ -57,7 +57,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToNextSection }) => {
         </motion.div>
       </div>
 
-      {/* Scroll Down Arrow */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
         <button
           onClick={scrollToNextSection}
