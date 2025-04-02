@@ -376,41 +376,42 @@ const process = [
 // Team members data
 const team = [
   {
-    name: 'Rajesh Patel',
-    role: 'Founder & Creative Director',
-    bio: 'With over 25 years in the textile industry, Rajesh brings a wealth of knowledge and a passion for sustainable fashion to Pehnaav.',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg'
+    name: 'Akankshya Mishra Patil',
+    role: 'CEO and Designer',
+    bio: 'Akankshya drives our vision with a perfect blend of creative insight and strategic leadership, ensuring that every design reflects our brand’s core values while pushing the boundaries of innovation.',
+    image: '/team/akanshya.jpg'
   },
   {
-    name: 'Priya Sharma',
-    role: 'Head of Design',
-    bio: 'A graduate from NIFT Delhi, Priya leads our design team with her innovative approach to combining traditional techniques with modern aesthetics.',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg'
+    name: 'Shubham Patil',
+    role: 'Chief Operatins Officer (COO)',
+    bio: 'Shubham oversees our day-to-day operations with precision and efficiency, ensuring that every process runs smoothly and aligns with our company’s strategic goals for sustained growth and success.',
+    image: '/team/shubham.jpg'
   },
   {
-    name: 'Amir Khan',
-    role: 'Production Manager',
-    bio: 'Amir ensures that every garment that leaves our workshop meets our exacting standards of quality and craftsmanship.',
-    image: 'https://randomuser.me/api/portraits/men/62.jpg'
+    name: 'Harsh Patil',
+    role: 'Chief Technology Officer (CTO)',
+    bio: 'Harsh leads our technology strategy, driving innovation and ensuring that all technical solutions are scalable, secure, and aligned with the company’s goals for long-term success.',
+    image: '/team/harsh_3.jpg'
   },
   {
-    name: 'Ananya Desai',
-    role: 'Business Development Manager',
-    bio: 'Ananya works closely with our retail partners to understand their needs and help them grow their businesses with our collections.',
-    image: 'https://randomuser.me/api/portraits/women/68.jpg'
+    name: 'Akshaya Mishra',
+    role: 'CFO and Director',
+    bio: 'Akshaya oversees our financial strategy and operations, ensuring robust fiscal health and sustainable growth, while providing visionary leadership to guide the company’s financial direction and long-term goals.',
+    image: '/team/ak.jpg'
   },
   {
-    name: 'Vikram Malhotra',
-    role: 'Supply Chain Director',
-    bio: 'Vikram oversees our entire supply chain, ensuring ethical sourcing of materials and efficient delivery of finished products.',
-    image: 'https://randomuser.me/api/portraits/men/75.jpg'
+    name: 'Sujal Asode',
+    role: 'Marketing Manager',
+    bio: 'Sujal crafts and executes dynamic marketing strategies that elevate our brand, engage our audience, and drive growth, always staying ahead of market trends and customer needs.',
+    image: '/team/sujal_2.jpg'
   },
   {
-    name: 'Meera Joshi',
-    role: 'Quality Assurance Lead',
-    bio: 'With an eye for detail, Meera leads our QA team, implementing rigorous standards that set Pehnaav apart in the wholesale market.',
-    image: 'https://randomuser.me/api/portraits/women/79.jpg'
-  }
+    name: 'Mayur Asode',
+    role: 'Supply Chain Manager',
+    bio: 'Mayur ensures the seamless flow of products from supplier to customer, optimizing every step of the supply chain to guarantee efficiency, cost-effectiveness, and timely delivery.',
+    image: '/team/mayur_2.jpg'
+  },
+  
 ];
 
 // Brand promises
