@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import ImageWithLoader from '@/components/ImageWithLoader';
 
 interface HeroSectionProps {
@@ -9,6 +10,13 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollToNextSection }) => {
+  const navigate = useNavigate();
+  
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -34,13 +42,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToNextSection }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => window.location.href = '/products'}
+              onClick={() => handleNavigate('/products')}
               className="inline-flex items-center justify-center px-8 py-3 bg-wine-800 hover:bg-wine-700 text-white rounded-md transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
             >
               Explore Collection
             </button>
             <button
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => handleNavigate('/contact')}
               className="inline-flex items-center justify-center px-8 py-3 bg-transparent hover:bg-white/10 text-white border border-white/30 rounded-md transition-all transform hover:translate-y-[-2px]"
             >
               Contact Us
