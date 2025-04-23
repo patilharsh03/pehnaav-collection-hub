@@ -400,6 +400,12 @@ const team = [
     image: '/team/ak.jpg'
   },
   {
+    name: 'Rashmi Ranjan Sahoo',
+    role: 'Supply Chain Director',
+    bio: 'Ranjan oversees our supply chain operations, ensuring efficient procurement, logistics, and inventory management. With a focus on reliability and optimization, Ranjan drives strategic improvements across the supply network to support the company’s growth.',
+    image: '/team/ranjan.jpg'
+  },
+  {
     name: 'Sujal Asode',
     role: 'Marketing Manager',
     bio: 'Sujal crafts and executes dynamic marketing strategies that elevate our brand, engage our audience, and drive growth, always staying ahead of market trends and customer needs.',
